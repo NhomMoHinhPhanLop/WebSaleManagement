@@ -16,7 +16,7 @@ import lombok.Data;
 @Table (name = "Customers")
 public class Customers {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer CustomerID;
     private String Password;
     private String Fullname;

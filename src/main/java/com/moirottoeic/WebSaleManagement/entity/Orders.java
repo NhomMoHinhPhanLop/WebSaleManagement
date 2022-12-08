@@ -17,7 +17,7 @@ import lombok.Data;
 @Table (name = "Orders")
 public class Orders {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer OrderID;
     private Integer CustomerID;
     @Temporal(javax.persistence.TemporalType.DATE)

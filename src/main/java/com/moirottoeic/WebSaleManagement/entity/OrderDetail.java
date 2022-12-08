@@ -16,7 +16,7 @@ import lombok.Data;
 @Table (name = "OrderDetail")
 public class OrderDetail {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ID;
     private Integer OrderID;
     private Integer VegetableID;
