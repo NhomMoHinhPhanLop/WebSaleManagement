@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html  xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -25,6 +25,7 @@
 
 <body>
     <!-- Page Preloder -->
+    
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -53,7 +54,7 @@
                 </ul>
             </div>
             <div class="header__top__right__auth">
-                <a href="#"><i class="fa fa-user"></i> Login</a>
+                <a th:href="@{/register}"><i class="fa fa-user"></i> Login</a>
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">

@@ -18,10 +18,23 @@ public class Customers {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer CustomerID;
+    
+   
+    private String Username;
+    
     private String Password;
+    
     private String Fullname;
     private String Address;
     private String City;
+
+    public String getUsername() {
+        return Username;
+    }
+
+    public void setUsername(String Username) {
+        Username = Username;
+    }
 
     /**
      * @return the CustomerID

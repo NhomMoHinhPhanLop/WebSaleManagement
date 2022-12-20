@@ -5,6 +5,10 @@
 package com.moirottoeic.WebSaleManagement.repository;
 
 import com.moirottoeic.WebSaleManagement.entity.Customers;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,6 +17,6 @@ import org.springframework.stereotype.Repository;
  * @author Admin
  */
 @Repository
-public interface CustomersRepository extends CrudRepository<Customers, Integer>{
-    
+public interface CustomersRepository extends JpaRepository<Customers, Integer>{
+	public Customers FindbyUsernameAndPass(String username,String password);
 }
