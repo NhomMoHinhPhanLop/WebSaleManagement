@@ -4,6 +4,8 @@
  */
 package com.moirottoeic.WebSaleManagement.repository;
 import com.moirottoeic.WebSaleManagement.entity.Vegetable;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,5 +15,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface VegetableRepository extends CrudRepository<Vegetable, Integer> {
-    
+
 }

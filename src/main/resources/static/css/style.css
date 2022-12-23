@@ -106,7 +106,15 @@ ol {
 	padding: 0;
 	margin: 0;
 }
-
+.noselect {
+  -webkit-touch-callout: none !important; /* iOS Safari */
+    -webkit-user-select: none !important; /* Safari */
+     -khtml-user-select: none !important; /* Konqueror HTML */
+       -moz-user-select: none !important; /* Old versions of Firefox */
+        -ms-user-select: none !important; /* Internet Explorer/Edge */
+            user-select: none !important; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -1939,6 +1947,15 @@ ol {
 	font-weight: 700;
 	width: 110px;
 }
+/*.shoping__cart__table table tbody tr td.shoping__cart__price:after,
+.shoping__cart__table table tbody tr td.shoping__cart__total:after,
+.shoping__checkout li span:after{
+    content: "VND";
+    font-size: 18px;
+    color: #1c1c1c;
+    font-weight: 700;
+    width: 100px;
+}*/
 
 .shoping__cart__table table tbody tr td.shoping__cart__item__close {
 	text-align: right;
