@@ -48,6 +48,15 @@
         <td th:utext="${state.current.Price}" >
             Price
         </td>
+        <form action="/addtocart" method="post">
+            <td>
+                <input type="hidden" name="id" th:value="${state.current.VegetableID}"/>
+                <input type="number" name="quantity"/>
+            </td>
+            <td>
+                <input type="submit" name="submit" value="Add to cart"/>
+            </td>
+        </form>
     </tr>
 </table>
 <style>

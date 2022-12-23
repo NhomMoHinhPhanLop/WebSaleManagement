@@ -6,6 +6,8 @@ package com.moirottoeic.WebSaleManagement.controller;
 
 import com.moirottoeic.WebSaleManagement.entity.*;
 import com.moirottoeic.WebSaleManagement.repository.*;
+import com.moirottoeic.WebSaleManagement.service.VegetableService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,10 +20,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class VegetableController {
     @Autowired
-    private VegetableRepository vegetableRepository;
+    private VegetableService vegetableService;
     @GetMapping("/all")
-    public String getAll(Model m){
-        Iterable<Vegetable> list = vegetableRepository.findAll();
+    public String getAllVegetable(Model m){
+        Iterable<Vegetable> list = vegetableService.getAll();
         m.addAttribute("data", list);
         return "main";
     }
